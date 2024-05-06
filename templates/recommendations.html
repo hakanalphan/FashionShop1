@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+</head>
+<body>
+    <h2>Uploaded Image</h2>
+    <img src="{{ uploaded_file.url }}" alt="Uploaded Image" width="300">
+
+    <h2>Content-based Recommendations</h2>
+    <div>
+        {% for image_url in recommended_images_content_based %}
+            <img src="{{ image_url }}" alt="Recommended Image" width="200">
+        {% endfor %}
+    </div>
+
+    <h2>Collaborative Filtering Recommendations</h2>
+    <div>
+        {% for image_url in recommended_images_collaborative %}
+            <img src="{{ image_url }}" alt="Recommended Image" width="200">
+        {% endfor %}
+    </div>
+
+    <h2>kNN Recommendations</h2>
+    <div>
+        {% for image_url in recommended_images_knn %}
+            <img src="{{ image_url }}" alt="Recommended Image" width="200">
+        {% endfor %}
+    </div>
+
+    <h2>SVM Recommendations</h2>
+    <div>
+        {% for image_url in recommended_images_svm %}
+            <img src="{{ image_url }}" alt="Recommended Image" width="200">
+        {% endfor %}
+    </div>
+</body>
+</html>
+
